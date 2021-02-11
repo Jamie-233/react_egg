@@ -25,6 +25,12 @@ export default class Index extends Component {
           <Item>
             <Link to="/class/lists">lists</Link>
           </Item>
+          <Item>
+            <Link to="/class/dva">dva</Link>
+          </Item>
+          <Item>
+            <Link to="/class/context">context</Link>
+          </Item>
         </List>
       </div>
     )

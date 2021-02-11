@@ -8,8 +8,9 @@ import {
 import dynamic from 'umi/dynamic';
 import renderRoutes from 'umi/lib/renderRoutes';
 import history from '@@/history';
+import { routerRedux } from 'dva';
 
-const Router = DefaultRouter;
+const Router = routerRedux.ConnectedRouter;
 
 const routes = [
   {
@@ -50,6 +51,62 @@ const routes = [
             _title_default: 'react_Egg',
           },
           {
+            path: '/class/context/consumer',
+            exact: true,
+            component: require('../class/context/consumer.js').default,
+            _title: 'react_Egg',
+            _title_default: 'react_Egg',
+          },
+          {
+            path: '/class/context',
+            exact: true,
+            component: require('../class/context/index.js').default,
+            _title: 'react_Egg',
+            _title_default: 'react_Egg',
+          },
+          {
+            path: '/class/context/lists',
+            exact: true,
+            component: require('../class/context/lists.js').default,
+            _title: 'react_Egg',
+            _title_default: 'react_Egg',
+          },
+          {
+            path: '/class/context/search',
+            exact: true,
+            component: require('../class/context/search.js').default,
+            _title: 'react_Egg',
+            _title_default: 'react_Egg',
+          },
+          {
+            path: '/class/context/searchContext',
+            exact: true,
+            component: require('../class/context/searchContext.js').default,
+            _title: 'react_Egg',
+            _title_default: 'react_Egg',
+          },
+          {
+            path: '/class/dva',
+            exact: true,
+            component: require('../class/dva/index.js').default,
+            _title: 'react_Egg',
+            _title_default: 'react_Egg',
+          },
+          {
+            path: '/class/dva/lists',
+            exact: true,
+            component: require('../class/dva/lists.js').default,
+            _title: 'react_Egg',
+            _title_default: 'react_Egg',
+          },
+          {
+            path: '/class/dva/search',
+            exact: true,
+            component: require('../class/dva/search.js').default,
+            _title: 'react_Egg',
+            _title_default: 'react_Egg',
+          },
+          {
             path: '/class',
             exact: true,
             component: require('../class/index.js').default,
@@ -57,9 +114,16 @@ const routes = [
             _title_default: 'react_Egg',
           },
           {
-            path: '/class/lists-item1',
+            path: '/class/list-item1',
             exact: true,
-            component: require('../class/lists-item1.js').default,
+            component: require('../class/list-item1.js').default,
+            _title: 'react_Egg',
+            _title_default: 'react_Egg',
+          },
+          {
+            path: '/class/list-item2',
+            exact: true,
+            component: require('../class/list-item2.js').default,
             _title: 'react_Egg',
             _title_default: 'react_Egg',
           },
@@ -67,13 +131,6 @@ const routes = [
             path: '/class/lists',
             exact: true,
             component: require('../class/lists.js').default,
-            _title: 'react_Egg',
-            _title_default: 'react_Egg',
-          },
-          {
-            path: '/class/:id',
-            exact: true,
-            component: require('../class/$id.js').default,
             _title: 'react_Egg',
             _title_default: 'react_Egg',
           },

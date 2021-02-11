@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class ListItem1 extends Component {
+export default class ListItem2 extends Component {
 
   constructor(props) {
     super(props);
@@ -12,7 +12,7 @@ export default class ListItem1 extends Component {
   render() {
     return (
       <div>
-        <h1>item-1-{this.props.name}</h1>
+        <h1>item2-{this.props.name}</h1>
       </div>
     )
   }
