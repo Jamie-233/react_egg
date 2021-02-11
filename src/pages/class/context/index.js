@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import SearchContext from './searchContext'
 import Search from './search';
-import Lists from './lists';
+// import Lists from './lists';
 import { getLists } from '@/services/search';
 import Consumer from './consumer';
+import LazyLoad from '@/components/LazyLoad';
+
 export default class Index extends Component {
 
   constructor(props) {
@@ -22,7 +24,6 @@ export default class Index extends Component {
             })
         case 'LISTS':
             const res = await getLists(action.payload);
-            console.log(res);
             return this.setState({
                 // lists: action.payload
                 lists: res.lists
@@ -40,7 +41,8 @@ export default class Index extends Component {
             dispatch: this.handleDispatch
         }}>
             <Search />
-            <Lists />
+            {/* <Lists /> */}
+            <LazyLoad component={require('./lists')} />
             <Consumer />
         </SearchContext.Provider>
       </div>
