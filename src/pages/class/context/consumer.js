@@ -20,7 +20,6 @@ export default class Consumer extends Component {
                         type: 'TEXT',
                         payload: 'consumer text'
                     })}>consumer: {state.text}</h1>
-                    
                 )
             }
         </SearchContext.Consumer>
