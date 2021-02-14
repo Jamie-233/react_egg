@@ -6,7 +6,6 @@ export default class ComponentOld extends Component {
     this.state = {
         text: {id: 1}
     };
-    console.log('constructor');
   }
 
   // 使用此方法在组件更新时动态修改里面的值
@@ -34,7 +33,6 @@ export default class ComponentOld extends Component {
   }
 
   render() {
-    console.log('render');
     return (
       <div onClick={this.handleClick}>
             component-new-{this.state.text.id}

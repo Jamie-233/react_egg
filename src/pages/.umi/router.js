@@ -229,6 +229,17 @@ const routes = [
             _title_default: 'react_Egg',
           },
           {
+            path: '/class/modal',
+            exact: true,
+            component: __IS_BROWSER
+              ? _dvaDynamic({
+                  component: () => import('../class/modal/index.js'),
+                })
+              : require('../class/modal/index.js').default,
+            _title: 'react_Egg',
+            _title_default: 'react_Egg',
+          },
+          {
             component: () =>
               React.createElement(
                 require('/Users/xss/Documents/github/react_Egg/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
